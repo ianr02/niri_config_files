@@ -1,0 +1,87 @@
+{
+  "display": {
+    "separator": " "},
+  "modules": [
+    {
+      "type": "title",
+      "key": "╭─󰌢",
+      "keyColor": "green"},
+    {
+      "type": "cpu",
+      "key": "├─󰻠",
+      "keyColor": "green"},
+    {
+      "type": "gpu",
+      "key": "├─󰍛",
+      "keyColor": "green"},
+    {
+      "type": "disk",
+      "key": "├─󰋊",
+      "keyColor": "green"},
+    {
+      "type": "memory",
+      "key": "╰─󰑭",
+      "keyColor": "green"},
+
+    "break",
+
+    {
+      "type": "shell",
+      "key": "╭─",
+      "keyColor": "yellow"},
+    {
+      "type": "terminal",
+      "key": "├─",
+      "keyColor": "yellow"},
+    {
+      "type": "terminalfont",
+      "key": "├─",
+      "keyColor": "yellow"},
+    {
+      "type": "de",
+      "key": "├─",
+      "keyColor": "yellow"},
+    {
+      "type": "wm",
+      "key": "╰─",
+      "keyColor": "yellow"},
+
+    "break",
+    {
+      "type": "os",
+      "key": "╭─󰌽",
+      "keyColor": "blue"},
+    {
+      "type": "kernel",
+      "key": "├─",
+      "format": "{1} {2}",
+      "keyColor": "blue"},
+    {
+      "type": "InitSystem",
+      "key": "├─󰓝",
+      "keyColor": "blue"},
+    {
+      "type": "command",
+      "key": "├─󰏖",
+      "keyColor": "blue",
+      "text": "emerge_count=$(qlist -I 2>/dev/null | wc -l); cargo_count=$(cargo install --list 2>/dev/null | tail -n +2 | grep -c '^\\S'); go_count=$(ls ~/go/bin/ 2>/dev/null | wc -l); parts=\"$emerge_count (emerge)\"; [ \"$cargo_count\" -gt 0 ] && parts=\"$parts, $cargo_count (cargo)\"; [ \"$go_count\" -gt 0 ] && parts=\"$parts, $go_count (go)\"; echo \"$parts\"",
+      "format": "{1}"},
+    {
+      "type": "uptime",
+      "key": "├─󰅐",
+      "keyColor": "blue"},
+
+    {
+      "type": "command",
+      "key": "╰─󱦟",
+      "keyColor": "blue",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "format": "OS Age: {1}"
+    },
+
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"}
+   ]
+}  
